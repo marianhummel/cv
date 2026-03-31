@@ -1,0 +1,96 @@
+"work": {
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "location": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "position": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string",
+        "format": "uri"
+      },
+      "startDate": {
+        "$ref": "#/definitions/iso8601"
+      },
+      "endDate": {
+        "$ref": "#/definitions/iso8601"
+      },
+      "summary": {
+        "type": "string"
+      },
+      "highlights": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+
+      "workProjects": {
+        "type": "array",
+        "description": "Projects completed within this role, focusing on engineering impact and implementation details",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Project name"
+            },
+            "description": {
+              "type": "string",
+              "description": "Short overview of the project"
+            },
+            "problem": {
+              "type": "string",
+              "description": "Problem or challenge addressed"
+            },
+            "solution": {
+              "type": "string",
+              "description": "How the problem was solved"
+            },
+            "techStack": {
+              "type": "array",
+              "description": "Technologies used",
+              "items": {
+                "type": "string"
+              }
+            },
+            "responsibilities": {
+              "type": "array",
+              "description": "Your specific contributions",
+              "items": {
+                "type": "string"
+              }
+            },
+            "impact": {
+              "type": "string",
+              "description": "Business or technical impact (metrics preferred)"
+            },
+            "startDate": {
+              "$ref": "#/definitions/iso8601"
+            },
+            "endDate": {
+              "$ref": "#/definitions/iso8601"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": ["name", "description"]
+        }
+      }
+    }
+  }
+}
