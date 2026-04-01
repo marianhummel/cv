@@ -142,7 +142,7 @@
             }
           }
         },
-        "workProjects": {
+        "projects": {
           "type": "array",
           "description": "Specify career projects",
           "items": {
@@ -289,31 +289,7 @@
         }
       }
     },
-    "awards": {
-      "type": "array",
-      "description": "Specify any awards you have received throughout your professional career",
-      "items": {
-        "type": "object",
-        "additionalProperties": true,
-        "properties": {
-          "title": {
-            "type": "string",
-            "description": "e.g. One of the 100 greatest minds of the century"
-          },
-          "date": {
-            "$ref": "#/definitions/iso8601"
-          },
-          "awarder": {
-            "type": "string",
-            "description": "e.g. Time Magazine"
-          },
-          "summary": {
-            "type": "string",
-            "description": "e.g. Received for my work with Quantum Physics"
-          }
-        }
-      }
-    },
+
     "certificates": {
       "type": "array",
       "description": "Specify any certificates you have received throughout your professional career",
@@ -342,36 +318,7 @@
         }
       }
     },
-    "publications": {
-      "type": "array",
-      "description": "Specify your publications through your career",
-      "items": {
-        "type": "object",
-        "additionalProperties": true,
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "e.g. The World Wide Web"
-          },
-          "publisher": {
-            "type": "string",
-            "description": "e.g. IEEE, Computer Magazine"
-          },
-          "releaseDate": {
-            "$ref": "#/definitions/iso8601"
-          },
-          "url": {
-            "type": "string",
-            "description": "e.g. http://www.computer.org.example.com/csdl/mags/co/1996/10/rx069-abs.html",
-            "format": "uri"
-          },
-          "summary": {
-            "type": "string",
-            "description": "Short summary of publication. e.g. Discussion of the World Wide Web, HTTP, HTML."
-          }
-        }
-      }
-    },
+
     "skills": {
       "type": "array",
       "description": "List out your professional skill-set",
@@ -462,104 +409,6 @@
         }
       }
     },
-    "projects": {
-      "type": "array",
-      "description": "Specify career projects",
-      "items": {
-        "type": "object",
-        "additionalProperties": true,
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "e.g. The World Wide Web"
-          },
-          "description": {
-            "type": "string",
-            "description": "Short summary of project. e.g. Collated works of 2017."
-          },
-          "highlights": {
-            "type": "array",
-            "description": "Specify multiple features",
-            "items": {
-              "type": "string",
-              "description": "e.g. Directs you close but not quite there"
-            }
-          },
-          "keywords": {
-            "type": "array",
-            "description": "Specify special elements involved",
-            "items": {
-              "type": "string",
-              "description": "e.g. AngularJS"
-            }
-          },
-          "startDate": {
-            "$ref": "#/definitions/iso8601"
-          },
-          "endDate": {
-            "$ref": "#/definitions/iso8601"
-          },
-          "url": {
-            "type": "string",
-            "format": "uri",
-            "description": "e.g. http://www.computer.org/csdl/mags/co/1996/10/rx069-abs.html"
-          },
-          "roles": {
-            "type": "array",
-            "description": "Specify your role on this project or in company",
-            "items": {
-              "type": "string",
-              "description": "e.g. Team Lead, Speaker, Writer"
-            }
-          },
-          "entity": {
-            "type": "string",
-            "description": "Specify the relevant company/entity affiliations e.g. 'greenpeace', 'corporationXYZ'"
-          },
-          "type": {
-            "type": "string",
-            "description": " e.g. 'volunteering', 'presentation', 'talk', 'application', 'conference'"
-          }
-        }
-      }
-    },
-    "sideProjects": {
-      "type": "array",
-      "description": "Specify side projects",
-      "items": {
-        "type": "object",
-        "additionalProperties": true,
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "e.g. The World Wide Web"
-          },
-          "url": {
-            "type": "string",
-            "format": "uri",
-            "description": "e.g. http://www.computer.org/csdl/mags/co/1996/10/rx069-abs.html"
-          },
-          "description": {
-            "type": "string",
-            "description": "Short summary of project. e.g. Collated works of 2017."
-          },
-          "keywords": {
-            "type": "array",
-            "description": "Specify special elements involved",
-            "items": {
-              "type": "string",
-              "description": "e.g. AngularJS"
-            }
-          },
-          "startDate": {
-            "$ref": "#/definitions/iso8601"
-          },
-          "endDate": {
-            "$ref": "#/definitions/iso8601"
-          }
-        }
-      }
-    },
     "meta": {
       "type": "object",
       "description": "The schema version and any other tooling configuration lives here",
@@ -585,6 +434,6 @@
       }
     }
   },
-  "title": "CV Schema",
+  "title": "CV Schema MH",
   "type": "object"
 }
